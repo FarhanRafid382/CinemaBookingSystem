@@ -1,0 +1,99 @@
+/* style.css - basic styling for Cinema Booking System */
+
+/* layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f7fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 18px;
+}
+
+/* header/navigation assumed in includes/header.php */
+nav {
+    background:#1f2937;
+    color:#fff;
+    padding:10px 18px;
+}
+nav a { color:#fff; margin-right:12px; text-decoration:none; font-weight:600; }
+
+/* cards & grids */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: 0 1px 4px rgba(16,24,40,0.06);
+    margin-bottom: 14px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* forms */
+form label { display:block; font-weight:600; margin-top:8px; margin-bottom:4px; }
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], select, textarea {
+    width:100%;
+    box-sizing: border-box;
+    padding:8px 10px;
+    border:1px solid #d1d5db;
+    border-radius:6px;
+    font-size:14px;
+}
+button, .btn {
+    display:inline-block;
+    background:#2563eb;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+}
+button:hover, .btn:hover { opacity:0.95; }
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* tables */
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-top:8px;
+}
+table thead th {
+    text-align:left;
+    padding:8px;
+    background:#f3f4f6;
+    border-bottom:1px solid #e5e7eb;
+}
+table tbody td {
+    padding:8px;
+    border-bottom:1px solid #eef2f7;
+}
+
+/* small helpers */
+.error { color:#b91c1c; background:#fee2e2; padding:8px; border-radius:6px; }
+.errors p { margin:0; padding:6px 0; }
+.card h3 { margin-top:0; }
+label small { color:#6b7280; font-weight:400; }
+
+@media (max-width:800px) {
+    .grid-2 { grid-template-columns: 1fr; }
+}
